@@ -1,0 +1,11 @@
+public class EJERCICIO3 {
+
+    public static void main(String[] argv) {
+
+        int squareArea;
+        squareArea =5*5;
+
+        System.out.println(squareArea);
+
+    }
+}
