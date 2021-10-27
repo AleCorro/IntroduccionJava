@@ -2,24 +2,34 @@ import java.util.Scanner;
 
 public class EJERCICIO48 {
 
-    public static void main(String[] args) {
+    public static void main(String [] args) {
 
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Introduzca el numero de filas que desee:");
-        int rows = reader.nextInt();
+        int numero = reader.nextInt();
 
-        
-        for (int i =0; i < rows ;i++) {
 
-            int number = 1;
+        for (int i = 1; i <= numero; i++) {
 
-            System.out.format("%" + (rows - i) * 2 + "s","");
-            for (int j=0; j <= i; j++) {
-                System.out.format("%4d",number);
-                number = number * (i - j) / (j + 1);
+
+
+           for (int j = 0; j < numero - i; j++) {
+               System.out.print("/ ");
+           }
+
+            for (int j = 0; j <= i - 1; j++) {
+                System.out.print(i - j + " ");
             }
-            System.out.println();
+            if (i > 1) {
+                for (int j = 2; j <= i; j++) {
+                    System.out.print(j + " ");
+                }
+            }
+            for (int j = 0; j < numero - i; j++) {
+                System.out.print("/ ");
+            }
+            System.out.println("/ ");
         }
     }
 }
