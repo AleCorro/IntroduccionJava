@@ -6,15 +6,20 @@ public class EJERCICIO56 {
 
         Scanner reader = new Scanner(System.in);
 
-        int numeroMayor = 0;
+          int[] numero = new int [10];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < numero.length; i++) {
 
-            System.out.println("Introduzca un numero:");
-            int numero = reader.nextInt();
+            System.out.println("Introduce el numero " + (i + 1) + ": ");
+            numero[i] = reader.nextInt();
+        }
 
-            if (numero > numeroMayor) {
-                numeroMayor = numero;
+        int numeroMayor;
+        numeroMayor = numero [0];
+
+        for (int j : numero) {
+            if (j > numeroMayor) {
+                numeroMayor = j;
             }
         }
         System.out.println("El numero mayor es: " + numeroMayor);
